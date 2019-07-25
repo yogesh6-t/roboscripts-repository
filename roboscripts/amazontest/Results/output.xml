@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 3.1.2 (Python 3.7.0 on win32)" generated="20190723 15:33:44.694" rpa="false">
+<suite id="s1" name="Amazontest1" source="C:\Users\CTEA\PycharmProjects\roboscripts\amazontest\Amazontest1.robot">
+<test id="s1-t1" name="test case to do sign-in before check out">
+<kw name="Open Browser with Amazon link" library="openbrowser">
+<arguments>
+<arg>${BROWSER}</arg>
+</arguments>
+<kw name="Open Browser" library="SeleniumLibrary">
+<doc>Opens a new browser instance to the given ``url``.</doc>
+<arguments>
+<arg>https://www.amazon.in/</arg>
+<arg>${browser}</arg>
+</arguments>
+<msg timestamp="20190723 15:33:45.025" level="INFO">Opening browser 'chrome' to base url 'https://www.amazon.in/'.</msg>
+<status status="PASS" starttime="20190723 15:33:45.025" endtime="20190723 15:33:55.121"></status>
+</kw>
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<doc>Waits until ``text`` appears on current page.</doc>
+<arguments>
+<arg>Your Amazon.in</arg>
+</arguments>
+<status status="PASS" starttime="20190723 15:33:55.121" endtime="20190723 15:33:55.190"></status>
+</kw>
+<status status="PASS" starttime="20190723 15:33:45.025" endtime="20190723 15:33:55.190"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>id=twotabsearchtextbox</arg>
+<arg>oneplus 7 mobile phones</arg>
+</arguments>
+<msg timestamp="20190723 15:33:55.191" level="INFO">Typing text 'oneplus 7 mobile phones' into text field 'id=twotabsearchtextbox'.</msg>
+<status status="PASS" starttime="20190723 15:33:55.191" endtime="20190723 15:33:56.375"></status>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<doc>Clicks button identified by ``locator``.</doc>
+<arguments>
+<arg>xpath=//*[@id="nav-search"]/form/div[2]/div/input</arg>
+</arguments>
+<msg timestamp="20190723 15:33:56.375" level="INFO">Clicking button 'xpath=//*[@id="nav-search"]/form/div[2]/div/input'.</msg>
+<status status="PASS" starttime="20190723 15:33:56.375" endtime="20190723 15:33:59.448"></status>
+</kw>
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<doc>Waits until ``text`` appears on current page.</doc>
+<arguments>
+<arg>results for "oneplus 7 mobile phones"</arg>
+</arguments>
+<status status="PASS" starttime="20190723 15:33:59.449" endtime="20190723 15:33:59.504"></status>
+</kw>
+<kw name="Click Image" library="SeleniumLibrary">
+<doc>Clicks an image identified by ``locator``.</doc>
+<arguments>
+<arg>xpath=//*[@id="search"]/div[1]/div[2]/div/span[3]/div[1]/div[1]/div/div/div/div[2]/div[1]/div/div/span/a/div/img</arg>
+</arguments>
+<msg timestamp="20190723 15:33:59.505" level="INFO">Clicking image 'xpath=//*[@id="search"]/div[1]/div[2]/div/span[3]/div[1]/div[1]/div/div/div/div[2]/div[1]/div/div/span/a/div/img'.</msg>
+<status status="PASS" starttime="20190723 15:33:59.504" endtime="20190723 15:33:59.757"></status>
+</kw>
+<kw name="Select Window" library="SeleniumLibrary">
+<doc>Selects browser window matching ``locator``.</doc>
+<arguments>
+<arg>NEW</arg>
+</arguments>
+<status status="PASS" starttime="20190723 15:33:59.758" endtime="20190723 15:33:59.778"></status>
+</kw>
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<doc>Waits until ``text`` appears on current page.</doc>
+<arguments>
+<arg>OnePlus 7 (Mirror Grey, 6GB RAM, 128GB Storage)</arg>
+</arguments>
+<status status="PASS" starttime="20190723 15:33:59.779" endtime="20190723 15:34:01.907"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath=//*[@id="add-to-cart-button"]</arg>
+</arguments>
+<msg timestamp="20190723 15:34:01.908" level="INFO">Clicking element 'xpath=//*[@id="add-to-cart-button"]'.</msg>
+<status status="PASS" starttime="20190723 15:34:01.907" endtime="20190723 15:34:05.430"></status>
+</kw>
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<doc>Waits until ``text`` appears on current page.</doc>
+<arguments>
+<arg>Added to Cart</arg>
+</arguments>
+<status status="PASS" starttime="20190723 15:34:05.431" endtime="20190723 15:34:05.470"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath=//*[@id="hlb-ptc-btn-native"]</arg>
+</arguments>
+<msg timestamp="20190723 15:34:05.471" level="INFO">Clicking element 'xpath=//*[@id="hlb-ptc-btn-native"]'.</msg>
+<status status="PASS" starttime="20190723 15:34:05.471" endtime="20190723 15:34:07.685"></status>
+</kw>
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<doc>Waits until ``text`` appears on current page.</doc>
+<arguments>
+<arg>Login</arg>
+</arguments>
+<status status="PASS" starttime="20190723 15:34:07.685" endtime="20190723 15:34:07.707"></status>
+</kw>
+<kw name="close chrome browser" library="closebrowser">
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20190723 15:34:07.707" endtime="20190723 15:34:10.118"></status>
+</kw>
+<status status="PASS" starttime="20190723 15:34:07.707" endtime="20190723 15:34:10.118"></status>
+</kw>
+<doc>test case to check for sign-in and if not,do so</doc>
+<tags>
+<tag>tag4</tag>
+</tags>
+<status status="PASS" starttime="20190723 15:33:45.024" endtime="20190723 15:34:10.119" critical="yes"></status>
+</test>
+<doc>" Test browser"</doc>
+<status status="PASS" starttime="20190723 15:33:44.696" endtime="20190723 15:34:10.120"></status>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0">Critical Tests</stat>
+<stat pass="1" fail="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="1" fail="0">tag4</stat>
+</tag>
+<suite>
+<stat pass="1" fail="0" id="s1" name="Amazontest1">Amazontest1</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 3.1.2 (Python 3.7.0 on win32)" generated="20190724 16:46:29.232" rpa="false">
+<suite id="s1" name="DemoLibraryImport" source="C:\Users\CTEA\PycharmProjects\roboscripts\demoUDL\Tests\DemoLibraryImport.robot">
+<test id="s1-t1" name="Read from CSV file">
+<kw name="Open CSV File" library="LibraryResource">
+<arguments>
+<arg>${CSV_FILENAME}</arg>
+</arguments>
+<assign>
+<var>${fileObj}</var>
+</assign>
+<kw name="Open Csv File From Device" library="CSVreader">
+<arguments>
+<arg>${filename}</arg>
+</arguments>
+<assign>
+<var>${fileObj}</var>
+</assign>
+<msg timestamp="20190724 16:46:29.281" level="INFO">${fileObj} = &lt;_io.TextIOWrapper name='../Resources/DemoCSVFile.csv' mode='r' encoding='cp1252'&gt;</msg>
+<status status="PASS" starttime="20190724 16:46:29.281" endtime="20190724 16:46:29.282"></status>
+</kw>
+<msg timestamp="20190724 16:46:29.282" level="INFO">${fileObj} = &lt;_io.TextIOWrapper name='../Resources/DemoCSVFile.csv' mode='r' encoding='cp1252'&gt;</msg>
+<status status="PASS" starttime="20190724 16:46:29.280" endtime="20190724 16:46:29.282"></status>
+</kw>
+<kw name="Should Not Be Equal" library="BuiltIn">
+<doc>Fails if the given objects are equal.</doc>
+<arguments>
+<arg>${None}</arg>
+<arg>${fileObj}</arg>
+</arguments>
+<msg timestamp="20190724 16:46:29.282" level="INFO">Argument types are:
+&lt;class 'NoneType'&gt;
+&lt;class '_io.TextIOWrapper'&gt;</msg>
+<status status="PASS" starttime="20190724 16:46:29.282" endtime="20190724 16:46:29.283"></status>
+</kw>
+<kw name="Read First Line from File" library="LibraryResource">
+<arguments>
+<arg>${fileObj}</arg>
+</arguments>
+<assign>
+<var>${line}</var>
+</assign>
+<kw name="Read First Line From Device" library="CSVreader">
+<arguments>
+<arg>${fileobject}</arg>
+</arguments>
+<assign>
+<var>${line}</var>
+</assign>
+<msg timestamp="20190724 16:46:29.284" level="INFO">${line} = ['Value11', 'Value12', 'Value13']</msg>
+<status status="PASS" starttime="20190724 16:46:29.283" endtime="20190724 16:46:29.284"></status>
+</kw>
+<msg timestamp="20190724 16:46:29.284" level="INFO">${line} = ['Value11', 'Value12', 'Value13']</msg>
+<status status="PASS" starttime="20190724 16:46:29.283" endtime="20190724 16:46:29.284"></status>
+</kw>
+<kw name="Should Not Be Empty" library="BuiltIn">
+<doc>Verifies that the given item is not empty.</doc>
+<arguments>
+<arg>${line}</arg>
+</arguments>
+<msg timestamp="20190724 16:46:29.284" level="INFO">Length is 3</msg>
+<status status="PASS" starttime="20190724 16:46:29.284" endtime="20190724 16:46:29.285"></status>
+</kw>
+<kw name="Should Be Equal" library="BuiltIn">
+<doc>Fails if the given objects are unequal.</doc>
+<arguments>
+<arg>${line}[2]</arg>
+<arg>${VAL}</arg>
+</arguments>
+<status status="PASS" starttime="20190724 16:46:29.285" endtime="20190724 16:46:29.285"></status>
+</kw>
+<kw name="Close CSV File" library="LibraryResource">
+<arguments>
+<arg>${fileObj}</arg>
+</arguments>
+<kw name="Close Csv File From Device" library="CSVreader">
+<arguments>
+<arg>${fileobject}</arg>
+</arguments>
+<status status="PASS" starttime="20190724 16:46:29.286" endtime="20190724 16:46:29.286"></status>
+</kw>
+<status status="PASS" starttime="20190724 16:46:29.285" endtime="20190724 16:46:29.286"></status>
+</kw>
+<doc>this is a test to read from CSV file</doc>
+<tags>
+<tag>currentRun</tag>
+</tags>
+<status status="PASS" starttime="20190724 16:46:29.280" endtime="20190724 16:46:29.287" critical="yes"></status>
+</test>
+<status status="PASS" starttime="20190724 16:46:29.234" endtime="20190724 16:46:29.287"></status>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0">Critical Tests</stat>
+<stat pass="1" fail="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="1" fail="0">currentRun</stat>
+</tag>
+<suite>
+<stat pass="1" fail="0" id="s1" name="DemoLibraryImport">DemoLibraryImport</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
